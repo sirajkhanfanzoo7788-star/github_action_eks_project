@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: github_action_eks_project-service
+  name: github-action-eks-project-service   # underscores to hyphens
 spec:
   type: LoadBalancer
   selector:
-    app: github_action_eks_project           # must match deployment labels
+    app: github-action-eks-project           # must match deployment labels
   ports:
-    - port: 80                     # public port
-      targetPort: 3000             # container port
+    - port: 80
+      targetPort: 3000

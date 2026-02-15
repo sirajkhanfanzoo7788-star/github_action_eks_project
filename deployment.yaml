@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: github_action_eks_project-deployment   # deployment name
+  name: github-action-eks-project-deployment   # changed '_' to '-'
 spec:
-  replicas: 2                        # number of pods
+  replicas: 2
   selector:
     matchLabels:
-      app: github_action_eks_project
+      app: github-action-eks-project
   template:
     metadata:
       labels:
-        app: github_action_eks_project
+        app: github-action-eks-project
     spec:
       containers:
-        - name: github_action_eks_project
+        - name: github-action-eks-project        # changed '_' to '-'
           image: 228948463033.dkr.ecr.us-east-1.amazonaws.com/github_action_eks_project:latest
           ports:
             - containerPort: 3000
