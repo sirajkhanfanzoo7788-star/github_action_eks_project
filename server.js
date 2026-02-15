@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("GitHub Actions + ECR + EKS Working 🚀");
+  res.send("GitHub Actions + ECR + EKS Working 🚀 ALUMDULILLAH");
 });
 
 app.listen(3000, () => {
