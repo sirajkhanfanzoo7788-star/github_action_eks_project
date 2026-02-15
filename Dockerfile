@@ -1,18 +1,17 @@
-# 1️⃣ Base image
 FROM node:20
 
-# 2️⃣ Set working directory
+# Set working directory
 WORKDIR /app
 
-# 3️⃣ Copy package files and install dependencies
-COPY package.json package-lock.json* ./
+# Copy package.json and install dependencies
+COPY package*.json ./
 RUN npm install
 
-# 4️⃣ Copy app code
+# Copy app code
 COPY . .
 
-# 5️⃣ Expose port your app uses
+# Expose port your app listens on
 EXPOSE 3000
 
-# 6️⃣ Start the app
-CMD ["node", "app.js"]
+# Start the app
+CMD ["node", "server.js"]
